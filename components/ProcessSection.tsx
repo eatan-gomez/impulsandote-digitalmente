@@ -1,104 +1,121 @@
-"use client";
-
-import { Search, PenTool, Code, Rocket, Check } from "lucide-react";
-
 export default function ProcessSection() {
-  const steps = [
-    {
-      number: "01",
-      title: "Diagnóstico & Estrategia",
-      subtitle: "Entendemos a fondo tu objetivo",
-      description:
-        "Analizamos tu modelo de negocio, tu público objetivo o la temática de tu evento. Definimos metas claras para que cada botón y cada pantalla tenga una razón comercial o estética.",
-      icon: Search,
-      highlight: "Briefing estratégico",
-    },
-    {
-      number: "02",
-      title: "Arquitectura & Prototipado UI/UX",
-      subtitle: "Visualizas el resultado antes de programar",
-      description:
-        "Diseñamos interfaces tecnológicas elegantes, fáciles de usar y optimizadas para celulares. Aseguramos que la experiencia del usuario sea intuitiva y memorable.",
-      icon: PenTool,
-      highlight: "Prototipo interactivo",
-    },
-    {
-      number: "03",
-      title: "Desarrollo de Alto Rendimiento",
-      subtitle: "Código moderno, veloz y seguro",
-      description:
-        "Construimos tu sitio, aplicación o invitación con las mejores tecnologías del mercado (Next.js, React, Tailwind). Cero lentitud, máxima seguridad y optimización extrema.",
-      icon: Code,
-      highlight: "Pruebas de calidad (QA)",
-    },
-    {
-      number: "04",
-      title: "Lanzamiento & Acompañamiento",
-      subtitle: "Puesta en marcha con resultados tangibles",
-      description:
-        "Desplegamos en servidores cloud globales, conectamos tu dominio y te capacitamos para que administres o compartas tu solución con total tranquilidad y respaldo.",
-      icon: Rocket,
-      highlight: "Soporte post-lanzamiento",
-    },
-  ];
-
   return (
-    <section id="metodologia" className="py-24 relative bg-[#050811] border-t border-white/5">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        {/* Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-950/40 border border-indigo-500/30 text-indigo-300 text-xs font-mono font-medium mb-4">
-            <Rocket className="w-3.5 h-3.5" />
-            <span>METODOLOGÍA ÁGIL & TRANSPARENTE</span>
-          </div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight">
-            Cómo transformamos tu visión en <span className="text-gradient-cyan">realidad</span>
-          </h2>
-          <p className="mt-4 text-base sm:text-lg text-slate-400 leading-relaxed">
-            Un proceso sin complicaciones técnicas para ti. Nos encargamos de toda la complejidad tecnológica mientras tú ves los avances paso a paso.
-          </p>
-        </div>
+    <section
+      className="section bg-halo"
+      id="proceso"
+      style={{ ['--h' as string]: 2 }}
+      data-moment="pinned-chapters"
+      aria-labelledby="proceso-h"
+    >
+      <div className="wrap mo-pc__grid">
+        <div className="mo-pc__text">
+          <h2 id="proceso-h">Proceso para crear tu web, aplicación o invitación</h2>
+          <ol className="mo-pc__steps">
+            <li className="mo-pc__step">
+              <h3>Plan estratégico del proyecto digital</h3>
+              <p>
+                Definimos qué necesita lograr tu negocio o evento antes de diseñar, evitando
+                funciones que no aportan valor.
+              </p>
+              <figure className="mo-pc__visual">
+                <img
+                  src="/assets/img/photo-d183-960.jpg"
+                  srcSet="/assets/img/photo-d183-500.jpg 500w, /assets/img/photo-d183-960.jpg 960w, /assets/img/photo-d183.jpg 1280w"
+                  sizes="(max-width: 900px) 92vw, 44vw"
+                  alt="Cuaderno de planeación y lápiz sobre escritorio de madera"
+                  width={1280}
+                  height={853}
+                  loading="lazy"
+                />
+              </figure>
+            </li>
 
-        {/* Steps Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {steps.map((step) => {
-            const Icon = step.icon;
-            return (
-              <div
-                key={step.number}
-                className="relative rounded-2xl glass-panel p-6 border border-white/10 flex flex-col justify-between group glass-panel-hover"
-              >
-                <div>
-                  <div className="flex items-center justify-between mb-5">
-                    <span className="text-3xl font-black font-mono text-cyan-400/40 group-hover:text-cyan-400 transition-colors">
-                      {step.number}
-                    </span>
-                    <div className="w-10 h-10 rounded-xl bg-slate-900 border border-white/10 flex items-center justify-center text-cyan-400 group-hover:scale-110 group-hover:border-cyan-500/40 transition-all">
-                      <Icon className="w-5 h-5" />
+            <li className="mo-pc__step">
+              <h3>Diseño y desarrollo web o de aplicación</h3>
+              <p>
+                Construimos páginas web rápidas, aplicaciones claras y pases digitales responsivos
+                adaptados a tu identidad.
+              </p>
+              <figure className="mo-pc__visual">
+                <img
+                  src="/assets/img/photo-f186069734-960.jpg"
+                  srcSet="/assets/img/photo-f186069734-500.jpg 500w, /assets/img/photo-f186069734-960.jpg 960w"
+                  sizes="(max-width: 900px) 92vw, 44vw"
+                  alt="Desarrollo web y pruebas de interfaz en laptop"
+                  width={960}
+                  height={1433}
+                  loading="lazy"
+                />
+              </figure>
+            </li>
+
+            <li className="mo-pc__step">
+              <h3>Publicación del sitio o invitación</h3>
+              <p>
+                Entregamos tu proyecto verificado en celular y escritorio, con enlaces listos para
+                compartir o comenzar a operar.
+              </p>
+              <div className="mo-pc__visual mo-pc__visual--lit">
+                <div className="ui ui-panel ui-checks" data-ui="checklist">
+                  <div className="ui-checks__head">
+                    <div className="ui-title">Lista de entrega</div>
+                    <span className="ui-spacer" />
+                    <div className="ui-meta" data-checks-count="">
+                      3 de 5
                     </div>
                   </div>
-
-                  <span className="text-[11px] font-mono text-slate-400 block mb-1">
-                    {step.subtitle}
-                  </span>
-                  <h3 className="text-lg font-bold text-white mb-3 group-hover:text-cyan-300 transition-colors">
-                    {step.title}
-                  </h3>
-                  <p className="text-xs text-slate-400 leading-relaxed mb-6">
-                    {step.description}
-                  </p>
-                </div>
-
-                <div className="pt-4 border-t border-white/10 flex items-center justify-between text-xs">
-                  <span className="font-mono text-cyan-300 text-[11px] flex items-center gap-1">
-                    <Check className="w-3.5 h-3.5 text-emerald-400" />
-                    {step.highlight}
-                  </span>
+                  <div className="ui-checks__bar">
+                    <i data-checks-bar="" style={{ ['--k' as string]: 0.6 }} />
+                  </div>
+                  <ul className="ui-checks__list">
+                    <li className="ui-check is-done">
+                      <span className="ui-check__box">
+                        <svg viewBox="0 0 16 16" aria-hidden="true">
+                          <path d="m4.5 8.2 2.3 2.3 4.7-5" />
+                        </svg>
+                      </span>
+                      <span className="ui-check__label">Dominio y certificado SSL</span>
+                    </li>
+                    <li className="ui-check is-done">
+                      <span className="ui-check__box">
+                        <svg viewBox="0 0 16 16" aria-hidden="true">
+                          <path d="m4.5 8.2 2.3 2.3 4.7-5" />
+                        </svg>
+                      </span>
+                      <span className="ui-check__label">Diseño adaptable verificado</span>
+                    </li>
+                    <li className="ui-check is-done">
+                      <span className="ui-check__box">
+                        <svg viewBox="0 0 16 16" aria-hidden="true">
+                          <path d="m4.5 8.2 2.3 2.3 4.7-5" />
+                        </svg>
+                      </span>
+                      <span className="ui-check__label">Formulario o pase QR activo</span>
+                    </li>
+                    <li className="ui-check">
+                      <span className="ui-check__box">
+                        <svg viewBox="0 0 16 16" aria-hidden="true">
+                          <path d="m4.5 8.2 2.3 2.3 4.7-5" />
+                        </svg>
+                      </span>
+                      <span className="ui-check__label">Pruebas de carga y enlaces</span>
+                    </li>
+                    <li className="ui-check">
+                      <span className="ui-check__box">
+                        <svg viewBox="0 0 16 16" aria-hidden="true">
+                          <path d="m4.5 8.2 2.3 2.3 4.7-5" />
+                        </svg>
+                      </span>
+                      <span className="ui-check__label">Capacitación y entrega final</span>
+                    </li>
+                  </ul>
                 </div>
               </div>
-            );
-          })}
+            </li>
+          </ol>
         </div>
+
+        <div className="mo-pc__visuals frame" />
       </div>
     </section>
   );

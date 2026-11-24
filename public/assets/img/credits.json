@@ -1,0 +1,135 @@
+{
+ "note": "Credits for the photographs in this folder: photos.mjs credits prints the footer block for the ones the pages use.",
+ "photos": [
+  {
+   "file": "photo-d183.jpg",
+   "files": [
+    "photo-d183-500.jpg",
+    "photo-d183-960.jpg",
+    "photo-d183.jpg"
+   ],
+   "id": "d183",
+   "alt": "Open blank notebook with a ribbon marker and a pencil lying across the pages on a dark wooden table",
+   "by": "Jan Kahánek",
+   "licence": "CC0",
+   "licenceUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+   "page": "https://commons.wikimedia.org/wiki/File:Tabel_day_1_(Unsplash).jpg",
+   "source": "Wikimedia Commons"
+  },
+  {
+   "file": "photo-c877.jpg",
+   "files": [
+    "photo-c877-500.jpg",
+    "photo-c877-960.jpg",
+    "photo-c877.jpg"
+   ],
+   "id": "c877",
+   "alt": "Close-up of soft-focus stacked books showing page edges and covers with no readable spines",
+   "by": "Nenad Stojkovic",
+   "licence": "CC BY 2.0",
+   "licenceUrl": "https://creativecommons.org/licenses/by/2.0/",
+   "page": "https://commons.wikimedia.org/wiki/File:Close-up_of_stacked_books._(51539890528).jpg",
+   "source": "Wikimedia Commons"
+  },
+  {
+   "file": "photo-f189923665-960.jpg",
+   "files": [
+    "photo-f189923665-500.jpg",
+    "photo-f189923665-960.jpg"
+   ],
+   "id": "f189923665",
+   "alt": "Decorative flowers and fruits on the wedding table with blurry background",
+   "by": "Shixart1985",
+   "licence": "CC BY 2.0",
+   "licenceUrl": "https://creativecommons.org/licenses/by/2.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Decorative_flowers_and_fruits_on_the_wedding_table_with_blurry_background.jpg",
+   "source": "Wikimedia Commons"
+  },
+  {
+   "file": "photo-f27659065-500.jpg",
+   "files": [
+    "photo-f27659065-500.jpg"
+   ],
+   "id": "f27659065",
+   "alt": "Flower table decoration Wedding in Budapest",
+   "by": "Yelkrokoyade",
+   "licence": "CC BY-SA 3.0",
+   "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Flower_table_decoration_Wedding_in_Budapest.jpg",
+   "source": "Wikimedia Commons"
+  },
+  {
+   "file": "photo-f186069734-960.jpg",
+   "files": [
+    "photo-f186069734-500.jpg",
+    "photo-f186069734-960.jpg"
+   ],
+   "id": "f186069734",
+   "alt": "Hands typing on a laptop during work hours in a modern office setting",
+   "by": "Shixart1985",
+   "licence": "CC BY 2.0",
+   "licenceUrl": "https://creativecommons.org/licenses/by/2.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Hands_typing_on_a_laptop_during_work_hours_in_a_modern_office_setting.jpg",
+   "source": "Wikimedia Commons"
+  },
+  {
+   "file": "photo-f138534043.jpg",
+   "files": [
+    "photo-f138534043-500.jpg",
+    "photo-f138534043-960.jpg",
+    "photo-f138534043.jpg"
+   ],
+   "id": "f138534043",
+   "alt": "Decorations for glamour birthday party",
+   "by": "Nenad Stojkovic",
+   "licence": "CC BY 2.0",
+   "licenceUrl": "https://creativecommons.org/licenses/by/2.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Decorations_for_glamour_birthday_party.jpg",
+   "source": "Wikimedia Commons"
+  },
+  {
+   "file": "photo-f37638137.jpg",
+   "files": [
+    "photo-f37638137-500.jpg",
+    "photo-f37638137-960.jpg",
+    "photo-f37638137.jpg"
+   ],
+   "id": "f37638137",
+   "alt": "Gala dinner in Utrecht, Holland (9445115221)",
+   "by": "Jeroen Komen from Utrecht, Netherlands",
+   "licence": "CC BY-SA 2.0",
+   "licenceUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Gala_dinner_in_Utrecht,_Holland_(9445115221).jpg",
+   "source": "Wikimedia Commons"
+  },
+  {
+   "file": "photo-f61711770.jpg",
+   "files": [
+    "photo-f61711770-500.jpg",
+    "photo-f61711770-960.jpg",
+    "photo-f61711770.jpg"
+   ],
+   "id": "f61711770",
+   "alt": "22, Bridal bouquet (Unsplash)",
+   "by": "Alvin Mahmudov alvinmahmudov",
+   "licence": "CC0",
+   "licenceUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "page": "https://commons.wikimedia.org/wiki/File:22,_Bridal_bouquet_(Unsplash).jpg",
+   "source": "Wikimedia Commons"
+  },
+  {
+   "file": "photo-f73783761-960.jpg",
+   "files": [
+    "photo-f73783761-500.jpg",
+    "photo-f73783761-960.jpg"
+   ],
+   "id": "f73783761",
+   "alt": "Bohemian National Hall Ballroom Windows",
+   "by": "Steven Bornholtz",
+   "licence": "CC BY-SA 4.0",
+   "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Bohemian_National_Hall_Ballroom_Windows.jpg",
+   "source": "Wikimedia Commons"
+  }
+ ]
+}

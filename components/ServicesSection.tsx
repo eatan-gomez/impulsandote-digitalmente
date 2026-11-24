@@ -1,183 +1,334 @@
-"use client";
-
-import {
-  Globe,
-  PartyPopper,
-  CheckCircle2,
-  ArrowRight,
-  Layers,
-  Cpu,
-  Sparkles,
-} from "lucide-react";
+const HUB_DIAGRAM_SPEC = JSON.stringify({
+  layout: "hub",
+  alt: "Tu sistema central conectado con WhatsApp, Gmail, Google Sheets, Stripe, Notion y GitHub.",
+  center: { label: "Plataforma", icon: "ui:bot" },
+  spokes: [
+    { label: "WhatsApp", icon: "whatsapp" },
+    { label: "Gmail", icon: "gmail" },
+    { label: "Sheets", icon: "google-sheets" },
+    { label: "Stripe", icon: "stripe" },
+    { label: "Notion", icon: "notion" },
+    { label: "GitHub", icon: "github" },
+  ],
+});
 
 export default function ServicesSection() {
-  const services = [
-    {
-      id: "web",
-      tag: "CONVERSIÓN & VENTAS",
-      title: "Páginas Web de Alto Impacto",
-      subtitle: "Diseñadas para cautivar miradas y captar clientes calificados.",
-      description:
-        "Creamos sitios web de vanguardia técnica que no solo se ven espectaculares, sino que están estratégicamente estructurados para convertir visitantes en clientes reales. Rápido, seguro y posicionado en Google.",
-      gradient: "from-cyan-500 to-blue-600",
-      accentBg: "bg-cyan-500/10",
-      accentBorder: "border-cyan-500/30",
-      accentText: "text-cyan-400",
-      icon: Globe,
-      features: [
-        "Arquitectura UI/UX moderna enfocada en conversión de leads",
-        "Velocidad de carga relámpago (< 1 segundo)",
-        "Optimización SEO para posicionar en Google local y global",
-        "Integración directa con WhatsApp, CRM y analítica web",
-        "Diseño 100% responsivo para móviles, tablets y monitores",
-        "Certificado SSL de máxima seguridad y hosting de alta disponibilidad",
-      ],
-      idealFor: "Empresas, despachos, profesionistas, emprendedores y marcas personales.",
-    },
-    {
-      id: "apps",
-      tag: "OPERACIÓN & EFICIENCIA",
-      title: "Desarrollo de Aplicaciones & Software",
-      subtitle: "Optimiza procesos, elimina errores y automatiza tu operación.",
-      description:
-        "Desarrollamos sistemas digitales a la medida exacta de tus necesidades empresariales. Olvídate de hojas de cálculo desordenadas y softwares genéricos caros: creamos la herramienta que tu equipo realmente necesita.",
-      gradient: "from-indigo-500 to-purple-600",
-      accentBg: "bg-indigo-500/10",
-      accentBorder: "border-indigo-500/30",
-      accentText: "text-indigo-400",
-      icon: Cpu,
-      features: [
-        "Paneles administrativos (dashboards) intuitivos con control de acceso",
-        "Automatización de flujos repetitivos y gestión de pedidos o citas",
-        "Bases de datos seguras, escalables y con respaldo automático",
-        "Integración con pasarelas de pago (Stripe, Mercado Pago) y APIs",
-        "Informes y métricas de desempeño del negocio en tiempo real",
-        "Acceso desde cualquier dispositivo sin necesidad de descargas pesadas",
-      ],
-      idealFor: "Pymes en expansión, negocios de servicios, logística y comercios.",
-    },
-    {
-      id: "invitaciones",
-      tag: "LÍNEA EXCLUSIVA EVENTOS",
-      title: "Invitaciones Digitales Interactivas",
-      subtitle: "La experiencia premium que tus invitados recordarán desde el primer click.",
-      description:
-        "Revoluciona la organización de tus eventos con invitaciones web de alta tecnología. Muy superior a un archivo PDF o una imagen estática: ofrece interacción total con confirmación en vivo y control de acceso.",
-      gradient: "from-purple-500 to-pink-600",
-      accentBg: "bg-purple-500/10",
-      accentBorder: "border-purple-500/30",
-      accentText: "text-pink-400",
-      icon: PartyPopper,
-      features: [
-        "Confirmación de asistencia (RSVP) en tiempo real con cupo de acompañantes",
-        "Ubicación GPS con botones directos para Waze y Google Maps",
-        "Pases de acceso exclusivos con código QR para recepción ordenada",
-        "Cuenta regresiva dinámica hacia la fecha del evento",
-        "Itinerario detallado, sugerencias de hospedaje y Dress Code interactivo",
-        "Mesa de regalos con enlaces bancarios, Liverpool, Amazon o sobre virtual",
-      ],
-      idealFor: "Bodas, XV Años, Galas corporativas, Bautizos y Organizadores de Eventos.",
-    },
-  ];
-
   return (
-    <section id="servicios" className="py-24 relative bg-[#060913] border-t border-white/5">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-950/40 border border-cyan-500/30 text-cyan-400 text-xs font-mono font-medium mb-4">
-            <Sparkles className="w-3.5 h-3.5" />
-            <span>NUESTRO CATÁLOGO ESTRATÉGICO</span>
+    <section
+      className="section g2 g2m"
+      id="servicios"
+      style={{ "--h": 2 } as React.CSSProperties}
+      aria-labelledby="servicios-h"
+    >
+      <div className="wrap">
+        {/* Screen 1 of 2 */}
+        <div className="group">
+          <div className="section-head">
+            <h2 id="servicios-h">
+              Servicios web, aplicaciones e invitaciones.{" "}
+              <span className="muted">Tecnología accesible con alcance definido.</span>
+            </h2>
           </div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight">
-            Tecnología diseñada para <span className="text-gradient-cyan">transformar tu realidad</span>
-          </h2>
-          <p className="mt-4 text-base sm:text-lg text-slate-400 leading-relaxed">
-            Planes integrales diseñados a la medida para empresas que buscan clientes, negocios que buscan optimizar su operación y organizadores que buscan eventos extraordinarios.
-          </p>
-        </div>
 
-        {/* Services Cards Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          {services.map((service) => {
-            const Icon = service.icon;
-            return (
-              <div
-                key={service.id}
-                className="relative rounded-2xl glass-panel p-6 sm:p-8 flex flex-col justify-between glass-panel-hover group border border-white/10"
-              >
-                {/* Glow accent */}
-                <div
-                  className={`absolute -top-12 -right-12 w-40 h-40 bg-gradient-to-br ${service.gradient} opacity-15 rounded-full blur-3xl pointer-events-none group-hover:opacity-30 transition-opacity`}
-                ></div>
-
-                <div>
-                  {/* Top Header */}
-                  <div className="flex items-center justify-between mb-6">
-                    <div
-                      className={`w-14 h-14 rounded-xl flex items-center justify-center bg-gradient-to-br ${service.gradient} shadow-lg shadow-cyan-950/50 text-white`}
-                    >
-                      <Icon className="w-7 h-7" />
-                    </div>
-                    <span
-                      className={`text-[11px] font-mono font-semibold tracking-wider px-3 py-1 rounded-full ${service.accentBg} ${service.accentBorder} ${service.accentText} border`}
-                    >
-                      {service.tag}
-                    </span>
-                  </div>
-
-                  {/* Title & Description */}
-                  <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-cyan-300 transition-colors">
-                    {service.title}
-                  </h3>
-                  <p className="text-sm font-medium text-slate-300 mb-4">
-                    {service.subtitle}
-                  </p>
-                  <p className="text-xs sm:text-sm text-slate-400 leading-relaxed mb-6">
-                    {service.description}
-                  </p>
-
-                  {/* Feature Checklist */}
-                  <div className="space-y-3 mb-8 pt-4 border-t border-white/10">
-                    <h4 className="text-xs font-mono uppercase tracking-wider text-slate-300 flex items-center gap-1.5">
-                      <Layers className="w-3.5 h-3.5 text-cyan-400" />
-                      <span>Capacidades Incluidas</span>
-                    </h4>
-                    <ul className="space-y-2.5">
-                      {service.features.map((feat, idx) => (
-                        <li key={idx} className="flex items-start gap-2.5 text-xs sm:text-sm text-slate-300">
-                          <CheckCircle2
-                            className={`w-4 h-4 mt-0.5 shrink-0 ${service.accentText}`}
-                          />
-                          <span>{feat}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-
-                {/* Footer with Target & Action */}
-                <div className="pt-6 border-t border-white/10">
-                  <div className="mb-4">
-                    <span className="text-[11px] font-mono text-slate-400 block mb-1">
-                      Ideal para:
-                    </span>
-                    <span className="text-xs text-slate-200 font-medium">
-                      {service.idealFor}
-                    </span>
-                  </div>
-
-                  <a
-                    href="#cotizador"
-                    className="w-full flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-slate-900/90 hover:bg-slate-800 text-white text-xs sm:text-sm font-semibold border border-white/10 group-hover:border-cyan-500/40 transition-all"
+          <div className="grid">
+            {/* Card 1: Websites for Lead Generation */}
+            <article className="card card--open card--row span-6">
+              <h3>Páginas web para captar clientes</h3>
+              <p>
+                Sitios rápidos, claros en celular y estructurados para convertir visitas en mensajes o solicitudes reales.
+              </p>
+              <div className="panel panel--flush">
+                <div className="stage stage--fade-b">
+                  <div
+                    className="at-rise fit to-edge"
+                    style={
+                      {
+                        "--fit-max": "390px",
+                        "--ax": "max(24px, 50% - 195px)",
+                        "--ay": "40px",
+                        "--ay-sm": "32px",
+                      } as React.CSSProperties
+                    }
+                    data-ui-loop=""
                   >
-                    <span>Cotizar este Servicio</span>
-                    <ArrowRight className="w-4 h-4 text-cyan-400 group-hover:translate-x-1 transition-transform" />
-                  </a>
+                    <div
+                      className="ui ui-panel ui-stat"
+                      data-ui="stat"
+                      data-from="42"
+                      data-to="68"
+                      data-suffix="%"
+                    >
+                      <div className="ui-stat__head">
+                        <div className="ui-stat__top">
+                          <span className="ui-stat__label">
+                            Solicitudes desde móvil
+                          </span>
+                          <span className="ui-stat__range">Últimos 14 días</span>
+                        </div>
+                        <div className="ui-stat__line">
+                          <span className="ui-stat__num" data-stat-num="">
+                            68%
+                          </span>
+                          <span className="ui-chip ui-chip--plain ui-stat__delta">
+                            +26 pts
+                          </span>
+                          <span className="ui-stat__sub">
+                            sobre el periodo previo
+                          </span>
+                        </div>
+                      </div>
+                      <div className="ui-stat__chart">
+                        <svg
+                          className="ui-stat__svg"
+                          viewBox="0 0 400 120"
+                          preserveAspectRatio="none"
+                          aria-hidden="true"
+                        >
+                          <path
+                            className="ui-stat__grid"
+                            d="M0 30.5H400M0 60.5H400M0 90.5H400"
+                          />
+                          <path
+                            className="ui-stat__cover"
+                            fillRule="evenodd"
+                            d=""
+                          />
+                          <g className="ui-stat__bars">
+                            <rect rx="3" x="0" y="54" width="21" height="66" />
+                            <rect rx="3" x="29" y="48" width="21" height="72" />
+                            <rect rx="3" x="58" y="51" width="21" height="69" />
+                            <rect rx="3" x="87" y="40" width="21" height="80" />
+                            <rect rx="3" x="116" y="44" width="21" height="76" />
+                            <rect rx="3" x="145" y="34" width="21" height="86" />
+                            <rect rx="3" x="174" y="39" width="21" height="81" />
+                            <rect rx="3" x="204" y="30" width="21" height="90" />
+                            <rect rx="3" x="233" y="35" width="21" height="85" />
+                            <rect rx="3" x="262" y="26" width="21" height="94" />
+                            <rect rx="3" x="291" y="31" width="21" height="89" />
+                            <rect rx="3" x="320" y="23" width="21" height="97" />
+                            <rect rx="3" x="349" y="27" width="21" height="93" />
+                            <rect rx="3" x="378" y="16" width="21" height="104" />
+                          </g>
+                        </svg>
+                        <div className="ui-stat__axis" aria-hidden="true">
+                          <span>Día 1</span>
+                          <span>Día 7</span>
+                          <span>Hoy</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
-            );
-          })}
+            </article>
+
+            {/* Card 2: Process Optimization Applications */}
+            <article className="card card--open card--row span-6">
+              <h3>Aplicaciones que optimizan procesos</h3>
+              <p>
+                Sistemas internos con reglas automáticas para pedidos, citas, cobros y control operativo diario.
+              </p>
+              <div className="panel panel--flush">
+                <div className="stage stage--fade-b">
+                  <div
+                    className="at-right to-edge"
+                    style={
+                      {
+                        "--ax": "32px",
+                        "--ay": "44px",
+                        "--ay-sm": "28px",
+                      } as React.CSSProperties
+                    }
+                  >
+                    <div className="ui ui-panel ui-toggles" data-ui="toggles">
+                      <div className="ui-head">
+                        <div className="ui-title">Reglas del sistema</div>
+                        <span className="ui-spacer" />
+                        <div className="ui-meta" data-tg-count="">
+                          3 de 4 activas
+                        </div>
+                      </div>
+                      <ul className="ui-toggles__list">
+                        <li className="ui-tg">
+                          <span className="ui-tg__text">
+                            <span className="ui-tg__label">
+                              Confirmación por WhatsApp
+                            </span>
+                            <span className="ui-tg__sub">
+                              Envío al registrar pedido o cita
+                            </span>
+                          </span>
+                          <button
+                            className="ui-switch is-on"
+                            type="button"
+                            role="switch"
+                            aria-checked="true"
+                            aria-label="Confirmación por WhatsApp"
+                          >
+                            <i />
+                          </button>
+                        </li>
+                        <li className="ui-tg">
+                          <span className="ui-tg__text">
+                            <span className="ui-tg__label">
+                              Descuento automático de stock
+                            </span>
+                            <span className="ui-tg__sub">
+                              Actualiza sucursales al instante
+                            </span>
+                          </span>
+                          <button
+                            className="ui-switch is-on"
+                            type="button"
+                            role="switch"
+                            aria-checked="true"
+                            aria-label="Descuento automático de stock"
+                          >
+                            <i />
+                          </button>
+                        </li>
+                        <li className="ui-tg">
+                          <span className="ui-tg__text">
+                            <span className="ui-tg__label">
+                              Aprobación manual de descuentos
+                            </span>
+                            <span className="ui-tg__sub">
+                              Solo en montos mayores al límite
+                            </span>
+                          </span>
+                          <button
+                            className="ui-switch"
+                            type="button"
+                            role="switch"
+                            aria-checked="false"
+                            aria-label="Aprobación manual de descuentos"
+                          >
+                            <i />
+                          </button>
+                        </li>
+                        <li className="ui-tg">
+                          <span className="ui-tg__text">
+                            <span className="ui-tg__label">
+                              Respaldo diario en la nube
+                            </span>
+                            <span className="ui-tg__sub">
+                              Copia cifrada cada madrugada
+                            </span>
+                          </span>
+                          <button
+                            className="ui-switch is-on"
+                            type="button"
+                            role="switch"
+                            aria-checked="true"
+                            aria-label="Respaldo diario en la nube"
+                          >
+                            <i />
+                          </button>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        {/* Screen 2 of 2 */}
+        <div className="group">
+          <div className="grid">
+            {/* Card 3: Hub Tools Diagram */}
+            <article className="card card--open card--row span-6">
+              <h3>Aplicaciones web integradas a tus herramientas</h3>
+              <p>
+                Integramos tu web o sistema con correo, hojas de cálculo, pasarelas de pago y mensajería en un solo flujo.
+              </p>
+              <div className="panel panel--flush">
+                <div
+                  className="dg"
+                  data-diagram={HUB_DIAGRAM_SPEC}
+                  data-icon-base="/assets/icons"
+                  suppressHydrationWarning
+                />
+              </div>
+            </article>
+
+            {/* Card 4: Digital Invitations Live RSVP */}
+            <article className="card card--open card--row span-6">
+              <h3>Invitaciones digitales con RSVP</h3>
+              <p>
+                Experiencias web temáticas para bodas, XV años y galas con mapa GPS, itinerario y pases QR por invitado.
+              </p>
+              <div className="panel panel--flush">
+                <div className="stage stage--fade-b">
+                  <div
+                    className="at-rise fit"
+                    style={
+                      {
+                        "--fit-max": "390px",
+                        "--ax": "max(24px, 50% - 195px)",
+                        "--ay": "calc(100% - 210px)",
+                        "--ay-sm": "24px",
+                      } as React.CSSProperties
+                    }
+                  >
+                    <div className="ui ui-notify" data-ui="notify">
+                      <ul className="ui-notify__list" data-notify-list="">
+                        <li className="ui-note">
+                          <span
+                            className="ui-avatar ui-note__av"
+                            data-tone="1"
+                          >
+                            FR
+                          </span>
+                          <span className="ui-note__text">
+                            <span className="ui-note__title">
+                              Familia Rodríguez confirmó <time>ahora</time>
+                            </span>
+                            <span className="ui-note__body">
+                              2 pases asignados · Mesa 4 · Boda Sofía y Ale
+                            </span>
+                          </span>
+                        </li>
+                        <li className="ui-note">
+                          <span
+                            className="ui-avatar ui-note__av"
+                            data-tone="4"
+                          >
+                            QR
+                          </span>
+                          <span className="ui-note__text">
+                            <span className="ui-note__title">
+                              Pase VIP #042 emitido <time>3m</time>
+                            </span>
+                            <span className="ui-note__body">
+                              Enviado con ruta de Google Maps y Waze
+                            </span>
+                          </span>
+                        </li>
+                        <li className="ui-note">
+                          <span
+                            className="ui-avatar ui-note__av"
+                            data-tone="3"
+                          >
+                            LP
+                          </span>
+                          <span className="ui-note__text">
+                            <span className="ui-note__title">
+                              Canción sugerida para XV <time>9m</time>
+                            </span>
+                            <span className="ui-note__body">
+                              Lista musical actualizada para el evento
+                            </span>
+                          </span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
         </div>
       </div>
     </section>
