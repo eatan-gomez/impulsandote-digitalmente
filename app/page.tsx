@@ -1,38 +1,32 @@
-import Navbar from "@/components/Navbar";
-import Hero from "@/components/Hero";
-import StatsSection from "@/components/StatsSection";
-import ServicesSection from "@/components/ServicesSection";
-import InvitationShowcase from "@/components/InvitationShowcase";
-import ProjectEstimator from "@/components/ProjectEstimator";
-import ProcessSection from "@/components/ProcessSection";
-import TechStack from "@/components/TechStack";
-import FAQSection from "@/components/FAQSection";
-import ContactSection from "@/components/ContactSection";
-import Footer from "@/components/Footer";
-import FloatingWhatsApp from "@/components/FloatingWhatsApp";
+import Navbar from '@/components/Navbar';
+import HeroTriptych from '@/components/HeroTriptych';
+import AppFrameSection from '@/components/AppFrameSection';
+import ServicesSection from '@/components/ServicesSection';
+import InvitationsSection from '@/components/InvitationsSection';
+import ProcessSection from '@/components/ProcessSection';
+import StatementSection from '@/components/StatementSection';
+import QuoteSection from '@/components/QuoteSection';
+import FAQSection from '@/components/FAQSection';
+import Footer, { ActionBar } from '@/components/Footer';
+import KitRunner from '@/components/KitRunner';
 
 export default function Home() {
   return (
-    <div className="relative min-h-screen bg-[#050811] text-slate-100 flex flex-col">
-      {/* Top Fixed Navigation */}
+    <>
       <Navbar />
-
-      {/* Main Content Flow */}
-      <main className="flex-1">
-        <Hero />
-        <StatsSection />
+      <main id="top">
+        <HeroTriptych />
+        <AppFrameSection />
         <ServicesSection />
-        <InvitationShowcase />
-        <ProjectEstimator />
+        <InvitationsSection />
         <ProcessSection />
-        <TechStack />
+        <StatementSection />
+        <QuoteSection />
         <FAQSection />
-        <ContactSection />
       </main>
-
-      {/* Global Footer & Floating Widget */}
       <Footer />
-      <FloatingWhatsApp />
-    </div>
+      <ActionBar />
+      <KitRunner />
+    </>
   );
 }

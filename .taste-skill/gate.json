@@ -1,0 +1,1241 @@
+{
+ "start": "2026-11-17T04:45:11.714Z",
+ "round": 2,
+ "idle": 0,
+ "errors": 0,
+ "status": "fail",
+ "history": [
+  {
+   "at": "2026-11-17T05:14:16.082Z",
+   "mode": "manual",
+   "status": "fail",
+   "fails": 39,
+   "round": 1,
+   "reused": false,
+   "stopHookActive": false
+  },
+  {
+   "at": "2026-11-17T05:25:37.313Z",
+   "mode": "manual",
+   "status": "fail",
+   "fails": 23,
+   "round": 2,
+   "reused": false,
+   "stopHookActive": false
+  }
+ ],
+ "max": 3,
+ "marker": {
+  "page": null,
+  "dir": "C:\\Users\\Eatan\\OneDrive\\Desktop\\impulsandote-digitalmente",
+  "kind": "software",
+  "start": "2026-11-17T04:45:11.714Z",
+  "by": "start.mjs",
+  "url": "http://127.0.0.1:3000/",
+  "category": "páginas web, aplicaciones e invitaciones digitales",
+  "primary": "Cotizar proyecto"
+ },
+ "manual": true,
+ "roundKey": "2881452d415155f4:da39a3ee",
+ "roundFree": false,
+ "idleFree": false,
+ "blockKey": null,
+ "fp": "2881452d415155f4",
+ "page": "http://127.0.0.1:3000/",
+ "found": {
+  "fails": [
+   {
+    "check": "assets",
+    "where": "(the page)",
+    "msg": "the stylesheet assets/ui/hero-collage/fragment.css did not load (404): everything here was measured without it",
+    "fix": "fix the path, or remove the reference",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "assets"
+    ],
+    "wheres": [
+     "(the page)"
+    ]
+   },
+   {
+    "check": "spill",
+    "where": "div.invite-scroll > div.inv-block:nth-of-type(3) > div.inv-countdown > div.inv-cd-box:nth-of-type(1) \"42 DÍAS\"",
+    "msg": "runs 30px past the top edge of the panel it sits on (section#proceso) (and 3 more like it: div.inv-cd-box:nth-of-type(2), div.inv-cd-box:nth-of-type(3), div.inv-cd-box:nth-of-type(4))",
+    "fix": "keep the box inside the panel it starts on: shrink it, or grow the panel to hold it",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "spill"
+    ],
+    "wheres": [
+     "div.invite-scroll > div.inv-block:nth-of-type(3) > div.inv-countdown > div.inv-cd-box:nth-of-type(1) \"42 DÍAS\""
+    ]
+   },
+   {
+    "check": "cut-text",
+    "where": "ul.ui-win__rows > li:nth-of-type(8) > button.ui-win__row.app-row-btn > span.ui-avatar \"NB\"",
+    "msg": "cut 9px at the bottom by the overflow of div.wrap > div.ui.app > div.app__pane.app__pane--list > div.ui-panel.ui-win",
+    "fix": "give the text room: no overflow clipping a line, no line past its box",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "cut-text"
+    ],
+    "wheres": [
+     "ul.ui-win__rows > li:nth-of-type(8) > button.ui-win__row.app-row-btn > span.ui-avatar \"NB\""
+    ]
+   },
+   {
+    "check": "cut-text",
+    "where": "ul.ui-win__rows > li:nth-of-type(8) > button.ui-win__row.app-row-btn > span.ui-win__st \"En curso\"",
+    "msg": "cut 9px at the bottom by the overflow of section#aplicaciones > div.wrap > div.ui.app > div.app__pane.app__pane--list",
+    "fix": "give the text room: no overflow clipping a line, no line past its box",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "cut-text"
+    ],
+    "wheres": [
+     "ul.ui-win__rows > li:nth-of-type(8) > button.ui-win__row.app-row-btn > span.ui-win__st \"En curso\""
+    ]
+   },
+   {
+    "check": "no-visual",
+    "where": "section#cotizar \"Cotización de web, aplicación o invitaci\"",
+    "msg": "no picture, effect or mock in this section; a feature section needs a visual",
+    "fix": "give the section a visual: a UI fragment on a ground, real icons, or a photograph that fits",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency",
+    "ids": [
+     "no-visual"
+    ],
+    "wheres": [
+     "section#cotizar \"Cotización de web, aplicación o invitaci\""
+    ]
+   },
+   {
+    "check": "button-styles",
+    "where": "div.wrap > div.hero-text.grid > div.span-3.start-10 > a.btn.btn--primary \"Cotizar proyecto\"",
+    "msg": "one button style (soft, fill #0e355c) in 2 heights: 44, 64px (\"Cotizar proyecto\" 64px, \"Solicitar propuesta\" 44px)",
+    "fix": "one primary and one secondary button: one shape, one height per size, one label size",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "button-styles"
+    ],
+    "wheres": [
+     "div.wrap > div.hero-text.grid > div.span-3.start-10 > a.btn.btn--primary \"Cotizar proyecto\""
+    ]
+   },
+   {
+    "check": "heading-scale",
+    "where": "h2#apps-h \"Aplicaciones web para ordenar procesos. \"",
+    "msg": "an h2 at 48px, as large as the h1 (48.2px) or larger (and 2 more like it: \"Servicios web, aplicacio\", \"Invitaciones digitales p\")",
+    "fix": "size headings by level: the h1 largest, one size per level, each level below the one above",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "heading-scale"
+    ],
+    "wheres": [
+     "h2#apps-h \"Aplicaciones web para ordenar procesos. \""
+    ]
+   },
+   {
+    "check": "section-gaps",
+    "where": "section#invitaciones / section#proceso",
+    "msg": "613px between these sections, +168% against the median 229px",
+    "fix": "use one gap between sections (all within 25% of each other)",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "section-gaps"
+    ],
+    "wheres": [
+     "section#invitaciones / section#proceso"
+    ]
+   },
+   {
+    "check": "section-height",
+    "where": "section#invitaciones \"Invitaciones digitales por evento. Prueb\"",
+    "msg": "the section's content does not fit it: its content is 84px taller than the section (scrollHeight 984, clientHeight 900); its lowest content ends 924px below its top, past 828px (the section less 72px of bottom padding); 17 parts lie outside the section's box (SR-2)",
+    "fix": "fit the content above the section's bottom padding (--padb), or make it two screens (.g2) in two groups",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency",
+    "ids": [
+     "section-height",
+     "screen-height"
+    ],
+    "wheres": [
+     "section#invitaciones \"Invitaciones digitales por evento. Prueb\"",
+     "section#invitaciones > div.wrap.grid > div.frame.frame--split \"Música activaInvitación webPortadaSede y\"",
+     "section#invitaciones > div.wrap.grid > div.frame.frame--split > div.invite-device \"Música activaInvitación webPortadaSede y\"",
+     "#invitaciones section.section \"Invitaciones digitales por event\""
+    ]
+   },
+   {
+    "check": "container-edges",
+    "where": "div.config-box > div.config-group:nth-of-type(1) > div.config-options > label.config-pill:nth-of-type(1) \"Sitio web\"",
+    "msg": "4 text blocks start on a left line at x 100, 20px from the container's left: text starts on the container's left, or on one split line (x 623, 732, 841) (also \"Captar clientes\", \"Presencia completa\", \"Ritmo estándar\") (SR-6)",
+    "fix": "start the text on the container's left, or on the one split line every split shares",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "container-edges"
+    ],
+    "wheres": [
+     "div.config-box > div.config-group:nth-of-type(1) > div.config-options > label.config-pill:nth-of-type(1) \"Sitio web\""
+    ]
+   },
+   {
+    "check": "flush",
+    "where": "div.app__pane.app__pane--open > div.app-detail > div.app-detail__actions > button.btn.btn--primary \"Marcar como completado\"",
+    "msg": "section#aplicaciones and section#servicios run together: -107px between their content, on one ground",
+    "fix": "give the section its padding at the edge where the ground changes (the closing call keeps a clear gap above the footer)",
+    "widths": [
+     390
+    ],
+    "from": "consistency",
+    "ids": [
+     "flush"
+    ],
+    "wheres": [
+     "div.app__pane.app__pane--open > div.app-detail > div.app-detail__actions > button.btn.btn--primary \"Marcar como completado\""
+    ]
+   },
+   {
+    "check": "collide",
+    "where": "div.app__pane.app__pane--open > div.app-detail > div.app-detail__actions > button.btn.btn--primary \"Marcar como completado\"",
+    "msg": "the words \"Servicios web, aplicaciones e in\" and the button div.app-detail__actions > button.btn.btn--primary of another section lie in one place: the button runs out of its section, which is shorter than what it holds",
+    "fix": "on a phone nothing lies on anything else: let the section grow with its content (min-height for its screens, never a fixed height; --hm: 2 when it needs two) or cut what it holds; keep pictures and cards off the buttons; pad the page under a fixed bar by the bar's height (top: the first section; end: the footer)",
+    "widths": [
+     390,
+     320
+    ],
+    "from": "consistency",
+    "ids": [
+     "collide"
+    ],
+    "wheres": [
+     "div.app__pane.app__pane--open > div.app-detail > div.app-detail__actions > button.btn.btn--primary \"Marcar como completado\""
+    ]
+   },
+   {
+    "check": "cut-text",
+    "where": "div.ui.app > div.app__pane.app__pane--open > div.app-detail > p.t-body \"Cada pedido entrante desde el sitio web \"",
+    "msg": "runs past the edge of its box section#aplicaciones > div.wrap > div.ui.app (and 7 more like it: \"Captura automática desde\", \"Completado\", \"Descuento en inventario \", \"Completado\", ...)",
+    "fix": "give the text room: no overflow clipping a line, no line past its box",
+    "widths": [
+     390
+    ],
+    "from": "consistency",
+    "ids": [
+     "cut-text"
+    ],
+    "wheres": [
+     "div.ui.app > div.app__pane.app__pane--open > div.app-detail > p.t-body \"Cada pedido entrante desde el sitio web \""
+    ]
+   },
+   {
+    "check": "cut-text",
+    "where": "div.app__pane.app__pane--open > div.app-detail > div.app-detail__steps > div.app-detail__step:nth-of-type(1) \"Captura automática desde formulario web \"",
+    "msg": "3 lines of its text sit where the box has no visible edge (its fill matches what is behind it there) (and 2 more like it: \"Descuento en inventario \", \"Confirmación de guía al \")",
+    "fix": "give the text room: no overflow clipping a line, no line past its box",
+    "widths": [
+     390
+    ],
+    "from": "consistency",
+    "ids": [
+     "cut-text"
+    ],
+    "wheres": [
+     "div.app__pane.app__pane--open > div.app-detail > div.app-detail__steps > div.app-detail__step:nth-of-type(1) \"Captura automática desde formulario web \""
+    ]
+   },
+   {
+    "check": "off-grid",
+    "where": "div.group:nth-of-type(1) > div.grid > article.card.card--open:nth-of-type(1) > h3 \"Páginas web para captar clientes\"",
+    "msg": "left edge at 40px, 16px off the page margin at 24px (50 elements, like h2#servicios-h); 7 more in this section off the grid too (p at 40px, h3 at 40px, p at 40px, h3 at 40px, ...)",
+    "fix": "move it onto the page margin, or the column edge its section uses",
+    "widths": [
+     390
+    ],
+    "from": "consistency",
+    "ids": [
+     "off-grid"
+    ],
+    "wheres": [
+     "div.group:nth-of-type(1) > div.grid > article.card.card--open:nth-of-type(1) > h3 \"Páginas web para captar clientes\""
+    ]
+   },
+   {
+    "check": "collide",
+    "where": "div.app__pane.app__pane--open > div.app-detail > div.app-detail__steps > div.app-detail__step:nth-of-type(1) \"Captura automática desde formulario web \"",
+    "msg": "the words \"Servicios web, aplicaciones e in\" and the card div.app-detail__steps > div.app-detail__step:nth-of-type(1) of another section lie in one place: the card runs out of its section, which is shorter than what it holds",
+    "fix": "on a phone nothing lies on anything else: let the section grow with its content (min-height for its screens, never a fixed height; --hm: 2 when it needs two) or cut what it holds; keep pictures and cards off the buttons; pad the page under a fixed bar by the bar's height (top: the first section; end: the footer)",
+    "widths": [
+     320
+    ],
+    "from": "consistency",
+    "ids": [
+     "collide"
+    ],
+    "wheres": [
+     "div.app__pane.app__pane--open > div.app-detail > div.app-detail__steps > div.app-detail__step:nth-of-type(1) \"Captura automática desde formulario web \""
+    ]
+   },
+   {
+    "check": "collide",
+    "where": "div.app__pane.app__pane--open > div.app-detail > div.app-detail__steps > div.app-detail__step:nth-of-type(2) \"Descuento en inventario central Completa\"",
+    "msg": "the words \"Servicios web, aplicaciones e in\" and the card div.app-detail__steps > div.app-detail__step:nth-of-type(2) of another section lie in one place: the card runs out of its section, which is shorter than what it holds",
+    "fix": "on a phone nothing lies on anything else: let the section grow with its content (min-height for its screens, never a fixed height; --hm: 2 when it needs two) or cut what it holds; keep pictures and cards off the buttons; pad the page under a fixed bar by the bar's height (top: the first section; end: the footer)",
+    "widths": [
+     320
+    ],
+    "from": "consistency",
+    "ids": [
+     "collide"
+    ],
+    "wheres": [
+     "div.app__pane.app__pane--open > div.app-detail > div.app-detail__steps > div.app-detail__step:nth-of-type(2) \"Descuento en inventario central Completa\""
+    ]
+   },
+   {
+    "check": "one-sided",
+    "where": "#preguntas section.section \"Preguntas sobre web, apps e invi\"",
+    "msg": "its visuals end at x 599.3, short of the right line 1360",
+    "fix": "let the row reach both .wrap edges",
+    "widths": [
+     1440
+    ],
+    "from": "layout",
+    "ids": [
+     "one-sided"
+    ],
+    "wheres": [
+     "#preguntas section.section \"Preguntas sobre web, apps e invi\""
+    ]
+   },
+   {
+    "check": "neighbour",
+    "where": "#proceso section.section.bg-halo \"Proceso para crear tu web, aplic\"",
+    "msg": "framed, 12px of #invitaciones section.section \"Invitaciones digitales por event\" shows",
+    "fix": "keep the next section's heading and picture out of this screen",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "layout",
+    "ids": [
+     "neighbour"
+    ],
+    "wheres": [
+     "#proceso section.section.bg-halo \"Proceso para crear tu web, aplic\""
+    ]
+   },
+   {
+    "check": "hero-lines",
+    "where": "section.hero h1",
+    "msg": "the check fills the h1 to 43 characters (this hero's maxChars in heroes.json), not the page's own: it takes 4 lines at 1440, 3 at most",
+    "fix": "the check fills the h1 to this hero's maxChars, not your own: take the next type pairing the deal printed (start.mjs); when the h1 is final and fits, waive it (target: section.hero h1)",
+    "widths": [
+     1440
+    ],
+    "from": "layout",
+    "ids": [
+     "hero-lines"
+    ],
+    "wheres": [
+     "section.hero h1"
+    ]
+   },
+   {
+    "check": "screen-height",
+    "where": "#servicios section.section.g2 \"Servicios web, aplicaciones e in\"",
+    "msg": "2138px, 2.53 screens; a section is exactly one or two (--h), or on a phone at least one that its content fills",
+    "fix": "make the section exactly one or two screens (--h: 1 or 2)",
+    "widths": [
+     390
+    ],
+    "from": "layout",
+    "ids": [
+     "screen-height"
+    ],
+    "wheres": [
+     "#servicios section.section.g2 \"Servicios web, aplicaciones e in\""
+    ]
+   },
+   {
+    "check": "neighbour",
+    "where": "#servicios section.section.g2 \"Servicios web, aplicaciones e in\"",
+    "msg": "framed, 44px of #aplicaciones section.section \"Aplicaciones web para ordenar pr\" shows",
+    "fix": "keep the next section's heading and picture out of this screen",
+    "widths": [
+     390
+    ],
+    "from": "layout",
+    "ids": [
+     "neighbour"
+    ],
+    "wheres": [
+     "#servicios section.section.g2 \"Servicios web, aplicaciones e in\""
+    ]
+   },
+   {
+    "check": "neighbour",
+    "where": "#preguntas section.section \"Preguntas sobre web, apps e invi\"",
+    "msg": "framed, 350px of the footer shows",
+    "fix": "keep the next section's heading and picture out of this screen",
+    "widths": [
+     390
+    ],
+    "from": "layout",
+    "ids": [
+     "neighbour"
+    ],
+    "wheres": [
+     "#preguntas section.section \"Preguntas sobre web, apps e invi\""
+    ]
+   }
+  ],
+  "warns": [
+   {
+    "check": "assets",
+    "where": "(the page)",
+    "msg": "the data file assets/icons/ui-bot.svg did not load (404)",
+    "fix": "fix the path, or remove the reference",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "empty-visual",
+    "where": "section#proceso > div.wrap.mo-pc__grid > div.mo-pc__visuals.frame > figure.mo-pc__visual:nth-of-type(1) \"photo-d183-960.jpg\"",
+    "msg": "the picture photo-d183-960.jpg has loaded but stays at opacity 0.00 once the page is scrolled through, still 1.1 s after it is brought to the middle of the screen: its frame shows only its ground (a reveal that never fires) (inside a held section or scroll scene, whose motion --quick does not check)",
+    "fix": "show the picture at rest: reveal it with a threshold the frame can reach (0.1-0.2), or not at all",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "empty-visual",
+    "where": "section#proceso > div.wrap.mo-pc__grid > div.mo-pc__visuals.frame > figure.mo-pc__visual:nth-of-type(2) \"photo-f186069734-960.jpg\"",
+    "msg": "the picture photo-f186069734-960.jpg has loaded but stays at opacity 0.00 once the page is scrolled through, still 1.1 s after it is brought to the middle of the screen: its frame shows only its ground (a reveal that never fires) (inside a held section or scroll scene, whose motion --quick does not check)",
+    "fix": "show the picture at rest: reveal it with a threshold the frame can reach (0.1-0.2), or not at all",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "scroll-reveal",
+    "where": "section#compromiso > div.wrap > p.mo-wh__text \"Tecnología accesible que convierte visit\"",
+    "msg": "starts \"color\" (0.2 s) the moment it is scrolled into view (an IntersectionObserver) on span.mo-w:nth-of-type(1) (inside a dealt moment's section, [data-moment]: an enter moment is expected on every kind; its still is judged under reduced motion)",
+    "fix": "show it at rest: no fade, rise or unmask when it is scrolled into view",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "scroll-reveal",
+    "where": "section#proceso \"Proceso para crear tu web, aplicación o \"",
+    "msg": "starts \"border-left-color\" (0.3 s) the moment it is scrolled into view (an IntersectionObserver) on li.mo-pc__step:nth-of-type(1) (inside a dealt moment's section, [data-moment]: an enter moment is expected on every kind; its still is judged under reduced motion)",
+    "fix": "show it at rest: no fade, rise or unmask when it is scrolled into view",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "pinned",
+    "where": "section#proceso > div.wrap.mo-pc__grid \"Proceso para crear tu web, aplicación o \"",
+    "msg": "held on screen for 0.4 screens of scroll (position: sticky) while the page moves on (inside a dealt moment's section, [data-moment]: expected on every kind, two moments at most, house rule; its still is judged under reduced motion)",
+    "fix": "let the section scroll with the page",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "no-visual",
+    "where": "section#preguntas \"Preguntas sobre web, apps e invitaciones\"",
+    "msg": "pictures, effects and mocks cover 22% of this section; a feature section needs a visual (about 25% or more)",
+    "fix": "give the section a visual: a UI fragment on a ground, real icons, or a photograph that fits",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "button-styles",
+    "where": "div.wrap.grid > div.span-5.stack-5 > div.tabs.m-has-ind > button.tab:nth-of-type(1) \"Boda elegante\"",
+    "msg": "the selected tab \"Boda elegante\" is drawn as a filled soft in #0e2238 (its sliding indicator), a fill none of the page's buttons use (#0e355c, #e1e4e5): it reads as one more button style",
+    "fix": "draw the selected tab as a line under its word, or in the primary button's fill",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "cta",
+    "where": "section#proceso \"Proceso para crear tu web, aplicación o \"",
+    "msg": "a section over 1.5 screens long with no link or button in it",
+    "fix": "add the action: a button in the hero, one on every priced item, one in the closing section",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "copy-buttons",
+    "where": "header.nav.nav--centre > div.wrap.nav__bar > div.nav__actions > a.btn.btn--primary \"Cotizar proyecto\"",
+    "msg": "\"Cotizar proyecto\" does not start with a verb (book, buy, try, start, get, see...) (and 3 more like it: \"Abrir vista completa\", \"Copiar resumen\", \"Solicitar propuesta\")",
+    "fix": "label buttons with a verb and what the visitor gets (\"Book a room\", \"Start free trial\")",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "busy-ground",
+    "where": "div.wrap > div.hero-text.grid > div.span-3:nth-of-type(1) > p.hero__lead \"Planes estratégicos para empresas y orga\"",
+    "msg": "text over a detailed part of a picture (its ground changes by 1.6 L* from one pixel to the next under the words)",
+    "fix": "move the text to a calm part of the picture, or put it on a panel",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "section-gaps",
+    "where": "section#preguntas / footer.footer.closing",
+    "msg": "341px between these sections, +49% against the median 229px",
+    "fix": "use one gap between sections (all within 25% of each other)",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "photo-credit",
+    "where": "(the page text)",
+    "msg": "2 library sources (wikimedia, unsplash): the page credits wikimedia, the page credits unsplash; confirm each shows the client's own product, place or people",
+    "fix": "confirm the library photograph shows the client's own product, place or people; otherwise replace it",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "nav-labels",
+    "where": "div.nav__menu > div.wrap.grid > div.menu-col.span-3:nth-of-type(1) > a:nth-of-type(1) \"Páginas webSitios enfocados en captar cl\"",
+    "msg": "\"Páginas webSitios enfocados en captar cl\" opens a section headed \"Servicios web, aplicaciones e invitaciones. Tecnol\"",
+    "fix": "name each nav link after the heading of the section it opens",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "nav-labels",
+    "where": "div.nav__menu > div.wrap.grid > div.menu-col.span-3:nth-of-type(2) > a:nth-of-type(2) \"XV años y galasConfirmación RSVP y mesa \"",
+    "msg": "\"XV años y galasConfirmación RSVP y mesa \" opens a section headed \"Invitaciones digitales por evento. Prueba cada dis\"",
+    "fix": "name each nav link after the heading of the section it opens",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "nav-labels",
+    "where": "div.nav__menu > div.wrap.grid > div.menu-col.span-3:nth-of-type(2) > a:nth-of-type(1) \"Invitaciones de bodaDiseño for\"",
+    "msg": "3 entries of one menu go to the same place (#invitaciones): \"Invitaciones de bodaDiseño for\", \"XV años y galasConfirmación RS\", \"Invitaciones interactivasTres \"",
+    "fix": "give each menu entry its own target (its section, its tab, its page), or show fewer entries",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "fade-cut",
+    "where": "ul.ui-win__rows > li:nth-of-type(8) > button.ui-win__row.app-row-btn > span.ui-win__who \"Almacén Norte\"",
+    "msg": "a line of div.ui.app fades out under its edge (\"Almacén Norte\"): drawn at a fraction of #0e2238 on #f6f7f6, half-erased",
+    "fix": "fit the mock's rows inside its panel (fewer rows, a taller panel), or end the fade below the last whole row: no row half-erased",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "copy-length",
+    "where": "h1#hero-h \"Webs, aplicaciones e invitaciones digita\"",
+    "msg": "a headline of 5 words on 4 lines at 48.2px: a paragraph set in display type",
+    "fix": "cut the heading to one short line (2 to 12 words) and move the rest into the text under it",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "copy-length",
+    "where": "h2#apps-h \"Aplicaciones web para ordenar procesos. \"",
+    "msg": "a section heading of 10 words on 4 lines at 48px: a paragraph set in display type",
+    "fix": "cut the heading to one short line (2 to 12 words) and move the rest into the text under it",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "copy-length",
+    "where": "section#preguntas \"Preguntas sobre web, apps e invitaciones\"",
+    "msg": "1 section over 90 words a screen outside the UI mocks (\"Preguntas sobre web, app\" 134); 51 words a screen across the page (506 words in 10 screens): a tech page says it in about 80 or fewer",
+    "fix": "cut every section to its heading, one line and the product UI: the UI says the rest; no second paragraph, no list of feature sentences",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "nav-current",
+    "where": "header.nav.nav--centre",
+    "msg": "the nav stays on screen with 4 links to the page's sections, but never marks the one you are in (no link changes as the page scrolls)",
+    "fix": "mark the link of the section on screen (a colour, a weight or a line under it) as the visitor scrolls",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "button-contrast",
+    "where": "div#panel-boda > div.btn-row > button.btn.btn--secondary \"Abrir vista completa\"",
+    "msg": "the button \"Abrir vista completa\" (#e1e4e5) stands only 1.19:1 off the ground around it: it reads as part of the ground, or as switched off",
+    "fix": "give the button a fill that stands at least 1.5:1 off what is around it, or an outline in the ink",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "button-contrast",
+    "where": "div.span-5.stack-4 > div.config-box > div.config-summary > button.btn.btn--secondary \"Copiar resumen\"",
+    "msg": "the button \"Copiar resumen\" (#e1e4e5) stands only 1.09:1 off the ground around it: it reads as part of the ground, or as switched off",
+    "fix": "give the button a fill that stands at least 1.5:1 off what is around it, or an outline in the ink",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "visual-caption",
+    "where": "div.ui.ui-panel > div.ui-stat__chart > div.ui-stat__axis > span:nth-of-type(1) \"Día 1\"",
+    "msg": "a muted 13px line of 1 row sits 8px under the drawing (svg): it reads as a caption: \"Día 1\"; no caption or description under any image, render or visual (house rule)",
+    "fix": "take the line away: no caption or description under, over or on any image, render or visual; a licence credit goes in one footer line",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "visual-caption",
+    "where": "div.invite-scroll > div.inv-block.inv-hero-block > span.inv-emblem > span \"EDICIÓN CEREMONIA Y GALA\"",
+    "msg": "a muted 11px line of 1 row sits 20px under the picture photo-f61711770-960.jpg: it reads as a caption: \"EDICIÓN CEREMONIA Y GALA\"; no caption or description under any image, render or visual (house rule)",
+    "fix": "take the line away: no caption or description under, over or on any image, render or visual; a licence credit goes in one footer line",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "heading-order",
+    "where": "div.closing__links:nth-of-type(2) > div.grid:nth-of-type(1) > div.span-2.footer__col:nth-of-type(2) > h4 \"Soluciones\"",
+    "msg": "\"Soluciones\" is an h4 after an h2: a level is skipped (in the header or footer)",
+    "fix": "step down one level at a time (h1, h2, h3): change the tag, not the look; a footer's column heads are h3",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "share-meta",
+    "where": "head",
+    "msg": "the head lacks og:image: a shared link shows no picture or title of its own",
+    "fix": "copy the head block of starter.html: og tags, twitter:card, the icon and theme-color (references/system.md, Head)",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "action-repeat",
+    "where": "header.nav.nav--centre > div.wrap.nav__bar > div.nav__actions > a.btn.btn--primary \"cotizar proyecto\"",
+    "msg": "\"cotizar proyecto\" shows 2 times on the first screen at 1440px (nav, hero): the nav's button and the hero's; nothing else on the screen may repeat it",
+    "fix": "show the action once a screen besides the nav's button: the hero's, the close's or the phone bar's, never all at once",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "form-send",
+    "where": "section#cotizar > div.wrap.grid > div.span-6.start-7:nth-of-type(2) > form.form \"mailto:contacto@impulsandotedigitalmente\"",
+    "msg": "the form opens a mail to contacto@impulsandotedigitalmente.example: a stand-in until the client gives its form address; list it in the report",
+    "fix": "send the form to the client's address (data-endpoint) and show the confirmation only after it answers; list a mailto stand-in in the report",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "one-section",
+    "where": "section#invitaciones \"Invitaciones digitales por evento. Prueb\"",
+    "msg": "the screen at scroll 4500px (stride 5) shows 12px of section 4 beside section 5: a screen shows one section (another may peek 8px, 24px WARN) (SR-4)",
+    "fix": "make each section exactly one screen or two, so a screen shows one section and no neighbour peeks",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "container-edges",
+    "where": "div.wrap.mo-pc__grid > div.mo-pc__text > ol.mo-pc__steps > li.mo-pc__step:nth-of-type(1) \"Plan estratégico del proyecto digitalDef\"",
+    "msg": "3 text blocks start on a left line at x 106, 26px from the container's left: text starts on the container's left, or on one split line (x 623, 732, 841) (also \"Diseño y desarrollo web o de apl\", \"Publicación del sitio o invitaci\") (it is in a scroll scene: told as a WARN) (SR-6)",
+    "fix": "start the text on the container's left, or on the one split line every split shares",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "nav",
+    "where": "header.nav.nav--centre > div.wrap.nav__bar > button.nav__toggle",
+    "msg": "the nav is lopsided: its last item ends 13px inside the content's edge (366px), while its first starts on the other edge",
+    "fix": "start the nav's first item and end its last on the content's two edges",
+    "widths": [
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "overlap-text",
+    "where": "div.app-detail > div.app-detail__head > div > div.app-detail__sub \"Cuenta: Sofía Méndez · Actualizado hace \"",
+    "msg": "inside div.ui.app, a box sits on the mock's own text and hides it mid-line (\"CN\") (and 5 more like it: \"Pedidos web · Sucursal N\", \"En curso\", \"Cada pedido entrante des\", \"Captura automática desde\", ...)",
+    "fix": "move the box off the text (or the text off the box)",
+    "widths": [
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "cut-text",
+    "where": "h2#servicios-h \"Servicios web, aplicaciones e invitacion\"",
+    "msg": "sits across the edge of a panel behind it (and 1 more like it: \"Tecnología accesible con\")",
+    "fix": "give the text room: no overflow clipping a line, no line past its box",
+    "widths": [
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "cut-text",
+    "where": "ul.ui-notify__list > li.ui-note:nth-of-type(2) > span.ui-note__text > span.ui-note__body \"Enviado con ruta de Google Maps y Waze\"",
+    "msg": "cut 13px at the bottom by the overflow of div.group:nth-of-type(2) > div.grid > article.card.card--open:nth-of-type(2) > div.panel.panel--flush: a fragment run out through its panel's edge",
+    "fix": "give the text room: no overflow clipping a line, no line past its box",
+    "widths": [
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "button-styles",
+    "where": "div.span-5.stack-4 > div.config-box > div.config-summary > button.btn.btn--secondary \"Copiar resumen\"",
+    "msg": "on the phone 4 buttons run the full width of their column, but  \"Copiar resumen\" is 150px of 310px: one action in two sizes",
+    "fix": "give every button the same width rule on the phone: all full width, or all at their own width",
+    "widths": [
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "section-gaps",
+    "where": "main#top > section.hero.hero--triptych / section#aplicaciones",
+    "msg": "117px between these sections, -48% against the median 223px of gaps at a change of ground",
+    "fix": "use one gap between sections (all within 25% of each other)",
+    "widths": [
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "section-gaps",
+    "where": "section#aplicaciones / section#servicios",
+    "msg": "the sections overlap by 107px",
+    "fix": "use one gap between sections (all within 25% of each other)",
+    "widths": [
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "section-gaps",
+    "where": "section#servicios / section#invitaciones",
+    "msg": "392px between these sections, +47% against the median 266px",
+    "fix": "use one gap between sections (all within 25% of each other)",
+    "widths": [
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "section-gaps",
+    "where": "section#invitaciones / section#proceso",
+    "msg": "169px between these sections, -36% against the median 266px",
+    "fix": "use one gap between sections (all within 25% of each other)",
+    "widths": [
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "tab-wrap",
+    "where": "div.wrap.grid > div.span-5.stack-5 > div.tabs.m-has-ind > button.tab:nth-of-type(3) \"Gala corporativa\"",
+    "msg": "the row of 3 tabs wraps onto 2 lines and leaves \"Gala corporativa\" alone on the last",
+    "fix": "fit the tabs on one line at this width (shorter labels, a scrolling row), or let them stack evenly",
+    "widths": [
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "photo-repeat",
+    "where": "div.wrap.grid > div.span-5.stack-4 > figure.faq-photo > img \"photo-d183.jpg\"",
+    "msg": "the photograph photo-d183.jpg is shown 2 times on the page: a picture the visitor has already seen",
+    "fix": "show each photograph once: a different picture of what this section names, or none",
+    "widths": [
+     390
+    ],
+    "from": "consistency"
+   }
+  ],
+  "crashed": [],
+  "seconds": {
+   "consistency": 169,
+   "layout": 8
+  }
+ },
+ "open": [
+  {
+   "check": "assets",
+   "where": "(the page)",
+   "msg": "the stylesheet assets/ui/hero-collage/fragment.css did not load (404): everything here was measured without it",
+   "fix": "fix the path, or remove the reference",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "assets"
+   ],
+   "wheres": [
+    "(the page)"
+   ]
+  },
+  {
+   "check": "spill",
+   "where": "div.invite-scroll > div.inv-block:nth-of-type(3) > div.inv-countdown > div.inv-cd-box:nth-of-type(1) \"42 DÍAS\"",
+   "msg": "runs 30px past the top edge of the panel it sits on (section#proceso) (and 3 more like it: div.inv-cd-box:nth-of-type(2), div.inv-cd-box:nth-of-type(3), div.inv-cd-box:nth-of-type(4))",
+   "fix": "keep the box inside the panel it starts on: shrink it, or grow the panel to hold it",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "spill"
+   ],
+   "wheres": [
+    "div.invite-scroll > div.inv-block:nth-of-type(3) > div.inv-countdown > div.inv-cd-box:nth-of-type(1) \"42 DÍAS\""
+   ]
+  },
+  {
+   "check": "cut-text",
+   "where": "ul.ui-win__rows > li:nth-of-type(8) > button.ui-win__row.app-row-btn > span.ui-avatar \"NB\"",
+   "msg": "cut 9px at the bottom by the overflow of div.wrap > div.ui.app > div.app__pane.app__pane--list > div.ui-panel.ui-win",
+   "fix": "give the text room: no overflow clipping a line, no line past its box",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "cut-text"
+   ],
+   "wheres": [
+    "ul.ui-win__rows > li:nth-of-type(8) > button.ui-win__row.app-row-btn > span.ui-avatar \"NB\""
+   ]
+  },
+  {
+   "check": "cut-text",
+   "where": "ul.ui-win__rows > li:nth-of-type(8) > button.ui-win__row.app-row-btn > span.ui-win__st \"En curso\"",
+   "msg": "cut 9px at the bottom by the overflow of section#aplicaciones > div.wrap > div.ui.app > div.app__pane.app__pane--list",
+   "fix": "give the text room: no overflow clipping a line, no line past its box",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "cut-text"
+   ],
+   "wheres": [
+    "ul.ui-win__rows > li:nth-of-type(8) > button.ui-win__row.app-row-btn > span.ui-win__st \"En curso\""
+   ]
+  },
+  {
+   "check": "no-visual",
+   "where": "section#cotizar \"Cotización de web, aplicación o invitaci\"",
+   "msg": "no picture, effect or mock in this section; a feature section needs a visual",
+   "fix": "give the section a visual: a UI fragment on a ground, real icons, or a photograph that fits",
+   "widths": [
+    1440,
+    390
+   ],
+   "from": "consistency",
+   "ids": [
+    "no-visual"
+   ],
+   "wheres": [
+    "section#cotizar \"Cotización de web, aplicación o invitaci\""
+   ]
+  },
+  {
+   "check": "button-styles",
+   "where": "div.wrap > div.hero-text.grid > div.span-3.start-10 > a.btn.btn--primary \"Cotizar proyecto\"",
+   "msg": "one button style (soft, fill #0e355c) in 2 heights: 44, 64px (\"Cotizar proyecto\" 64px, \"Solicitar propuesta\" 44px)",
+   "fix": "one primary and one secondary button: one shape, one height per size, one label size",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "button-styles"
+   ],
+   "wheres": [
+    "div.wrap > div.hero-text.grid > div.span-3.start-10 > a.btn.btn--primary \"Cotizar proyecto\""
+   ]
+  },
+  {
+   "check": "heading-scale",
+   "where": "h2#apps-h \"Aplicaciones web para ordenar procesos. \"",
+   "msg": "an h2 at 48px, as large as the h1 (48.2px) or larger (and 2 more like it: \"Servicios web, aplicacio\", \"Invitaciones digitales p\")",
+   "fix": "size headings by level: the h1 largest, one size per level, each level below the one above",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "heading-scale"
+   ],
+   "wheres": [
+    "h2#apps-h \"Aplicaciones web para ordenar procesos. \""
+   ]
+  },
+  {
+   "check": "section-gaps",
+   "where": "section#invitaciones / section#proceso",
+   "msg": "613px between these sections, +168% against the median 229px",
+   "fix": "use one gap between sections (all within 25% of each other)",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "section-gaps"
+   ],
+   "wheres": [
+    "section#invitaciones / section#proceso"
+   ]
+  },
+  {
+   "check": "section-height",
+   "where": "section#invitaciones \"Invitaciones digitales por evento. Prueb\"",
+   "msg": "the section's content does not fit it: its content is 84px taller than the section (scrollHeight 984, clientHeight 900); its lowest content ends 924px below its top, past 828px (the section less 72px of bottom padding); 17 parts lie outside the section's box (SR-2)",
+   "fix": "fit the content above the section's bottom padding (--padb), or make it two screens (.g2) in two groups",
+   "widths": [
+    1440,
+    390
+   ],
+   "from": "consistency",
+   "ids": [
+    "section-height",
+    "screen-height"
+   ],
+   "wheres": [
+    "section#invitaciones \"Invitaciones digitales por evento. Prueb\"",
+    "section#invitaciones > div.wrap.grid > div.frame.frame--split \"Música activaInvitación webPortadaSede y\"",
+    "section#invitaciones > div.wrap.grid > div.frame.frame--split > div.invite-device \"Música activaInvitación webPortadaSede y\"",
+    "#invitaciones section.section \"Invitaciones digitales por event\""
+   ]
+  },
+  {
+   "check": "container-edges",
+   "where": "div.config-box > div.config-group:nth-of-type(1) > div.config-options > label.config-pill:nth-of-type(1) \"Sitio web\"",
+   "msg": "4 text blocks start on a left line at x 100, 20px from the container's left: text starts on the container's left, or on one split line (x 623, 732, 841) (also \"Captar clientes\", \"Presencia completa\", \"Ritmo estándar\") (SR-6)",
+   "fix": "start the text on the container's left, or on the one split line every split shares",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "container-edges"
+   ],
+   "wheres": [
+    "div.config-box > div.config-group:nth-of-type(1) > div.config-options > label.config-pill:nth-of-type(1) \"Sitio web\""
+   ]
+  },
+  {
+   "check": "flush",
+   "where": "div.app__pane.app__pane--open > div.app-detail > div.app-detail__actions > button.btn.btn--primary \"Marcar como completado\"",
+   "msg": "section#aplicaciones and section#servicios run together: -107px between their content, on one ground",
+   "fix": "give the section its padding at the edge where the ground changes (the closing call keeps a clear gap above the footer)",
+   "widths": [
+    390
+   ],
+   "from": "consistency",
+   "ids": [
+    "flush"
+   ],
+   "wheres": [
+    "div.app__pane.app__pane--open > div.app-detail > div.app-detail__actions > button.btn.btn--primary \"Marcar como completado\""
+   ]
+  },
+  {
+   "check": "collide",
+   "where": "div.app__pane.app__pane--open > div.app-detail > div.app-detail__actions > button.btn.btn--primary \"Marcar como completado\"",
+   "msg": "the words \"Servicios web, aplicaciones e in\" and the button div.app-detail__actions > button.btn.btn--primary of another section lie in one place: the button runs out of its section, which is shorter than what it holds",
+   "fix": "on a phone nothing lies on anything else: let the section grow with its content (min-height for its screens, never a fixed height; --hm: 2 when it needs two) or cut what it holds; keep pictures and cards off the buttons; pad the page under a fixed bar by the bar's height (top: the first section; end: the footer)",
+   "widths": [
+    390,
+    320
+   ],
+   "from": "consistency",
+   "ids": [
+    "collide"
+   ],
+   "wheres": [
+    "div.app__pane.app__pane--open > div.app-detail > div.app-detail__actions > button.btn.btn--primary \"Marcar como completado\""
+   ]
+  },
+  {
+   "check": "cut-text",
+   "where": "div.ui.app > div.app__pane.app__pane--open > div.app-detail > p.t-body \"Cada pedido entrante desde el sitio web \"",
+   "msg": "runs past the edge of its box section#aplicaciones > div.wrap > div.ui.app (and 7 more like it: \"Captura automática desde\", \"Completado\", \"Descuento en inventario \", \"Completado\", ...)",
+   "fix": "give the text room: no overflow clipping a line, no line past its box",
+   "widths": [
+    390
+   ],
+   "from": "consistency",
+   "ids": [
+    "cut-text"
+   ],
+   "wheres": [
+    "div.ui.app > div.app__pane.app__pane--open > div.app-detail > p.t-body \"Cada pedido entrante desde el sitio web \""
+   ]
+  },
+  {
+   "check": "cut-text",
+   "where": "div.app__pane.app__pane--open > div.app-detail > div.app-detail__steps > div.app-detail__step:nth-of-type(1) \"Captura automática desde formulario web \"",
+   "msg": "3 lines of its text sit where the box has no visible edge (its fill matches what is behind it there) (and 2 more like it: \"Descuento en inventario \", \"Confirmación de guía al \")",
+   "fix": "give the text room: no overflow clipping a line, no line past its box",
+   "widths": [
+    390
+   ],
+   "from": "consistency",
+   "ids": [
+    "cut-text"
+   ],
+   "wheres": [
+    "div.app__pane.app__pane--open > div.app-detail > div.app-detail__steps > div.app-detail__step:nth-of-type(1) \"Captura automática desde formulario web \""
+   ]
+  },
+  {
+   "check": "off-grid",
+   "where": "div.group:nth-of-type(1) > div.grid > article.card.card--open:nth-of-type(1) > h3 \"Páginas web para captar clientes\"",
+   "msg": "left edge at 40px, 16px off the page margin at 24px (50 elements, like h2#servicios-h); 7 more in this section off the grid too (p at 40px, h3 at 40px, p at 40px, h3 at 40px, ...)",
+   "fix": "move it onto the page margin, or the column edge its section uses",
+   "widths": [
+    390
+   ],
+   "from": "consistency",
+   "ids": [
+    "off-grid"
+   ],
+   "wheres": [
+    "div.group:nth-of-type(1) > div.grid > article.card.card--open:nth-of-type(1) > h3 \"Páginas web para captar clientes\""
+   ]
+  },
+  {
+   "check": "collide",
+   "where": "div.app__pane.app__pane--open > div.app-detail > div.app-detail__steps > div.app-detail__step:nth-of-type(1) \"Captura automática desde formulario web \"",
+   "msg": "the words \"Servicios web, aplicaciones e in\" and the card div.app-detail__steps > div.app-detail__step:nth-of-type(1) of another section lie in one place: the card runs out of its section, which is shorter than what it holds",
+   "fix": "on a phone nothing lies on anything else: let the section grow with its content (min-height for its screens, never a fixed height; --hm: 2 when it needs two) or cut what it holds; keep pictures and cards off the buttons; pad the page under a fixed bar by the bar's height (top: the first section; end: the footer)",
+   "widths": [
+    320
+   ],
+   "from": "consistency",
+   "ids": [
+    "collide"
+   ],
+   "wheres": [
+    "div.app__pane.app__pane--open > div.app-detail > div.app-detail__steps > div.app-detail__step:nth-of-type(1) \"Captura automática desde formulario web \""
+   ]
+  },
+  {
+   "check": "collide",
+   "where": "div.app__pane.app__pane--open > div.app-detail > div.app-detail__steps > div.app-detail__step:nth-of-type(2) \"Descuento en inventario central Completa\"",
+   "msg": "the words \"Servicios web, aplicaciones e in\" and the card div.app-detail__steps > div.app-detail__step:nth-of-type(2) of another section lie in one place: the card runs out of its section, which is shorter than what it holds",
+   "fix": "on a phone nothing lies on anything else: let the section grow with its content (min-height for its screens, never a fixed height; --hm: 2 when it needs two) or cut what it holds; keep pictures and cards off the buttons; pad the page under a fixed bar by the bar's height (top: the first section; end: the footer)",
+   "widths": [
+    320
+   ],
+   "from": "consistency",
+   "ids": [
+    "collide"
+   ],
+   "wheres": [
+    "div.app__pane.app__pane--open > div.app-detail > div.app-detail__steps > div.app-detail__step:nth-of-type(2) \"Descuento en inventario central Completa\""
+   ]
+  },
+  {
+   "check": "one-sided",
+   "where": "#preguntas section.section \"Preguntas sobre web, apps e invi\"",
+   "msg": "its visuals end at x 599.3, short of the right line 1360",
+   "fix": "let the row reach both .wrap edges",
+   "widths": [
+    1440
+   ],
+   "from": "layout",
+   "ids": [
+    "one-sided"
+   ],
+   "wheres": [
+    "#preguntas section.section \"Preguntas sobre web, apps e invi\""
+   ]
+  },
+  {
+   "check": "neighbour",
+   "where": "#proceso section.section.bg-halo \"Proceso para crear tu web, aplic\"",
+   "msg": "framed, 12px of #invitaciones section.section \"Invitaciones digitales por event\" shows",
+   "fix": "keep the next section's heading and picture out of this screen",
+   "widths": [
+    1440,
+    390
+   ],
+   "from": "layout",
+   "ids": [
+    "neighbour"
+   ],
+   "wheres": [
+    "#proceso section.section.bg-halo \"Proceso para crear tu web, aplic\""
+   ]
+  },
+  {
+   "check": "hero-lines",
+   "where": "section.hero h1",
+   "msg": "the check fills the h1 to 43 characters (this hero's maxChars in heroes.json), not the page's own: it takes 4 lines at 1440, 3 at most",
+   "fix": "the check fills the h1 to this hero's maxChars, not your own: take the next type pairing the deal printed (start.mjs); when the h1 is final and fits, waive it (target: section.hero h1)",
+   "widths": [
+    1440
+   ],
+   "from": "layout",
+   "ids": [
+    "hero-lines"
+   ],
+   "wheres": [
+    "section.hero h1"
+   ]
+  },
+  {
+   "check": "screen-height",
+   "where": "#servicios section.section.g2 \"Servicios web, aplicaciones e in\"",
+   "msg": "2138px, 2.53 screens; a section is exactly one or two (--h), or on a phone at least one that its content fills",
+   "fix": "make the section exactly one or two screens (--h: 1 or 2)",
+   "widths": [
+    390
+   ],
+   "from": "layout",
+   "ids": [
+    "screen-height"
+   ],
+   "wheres": [
+    "#servicios section.section.g2 \"Servicios web, aplicaciones e in\""
+   ]
+  },
+  {
+   "check": "neighbour",
+   "where": "#servicios section.section.g2 \"Servicios web, aplicaciones e in\"",
+   "msg": "framed, 44px of #aplicaciones section.section \"Aplicaciones web para ordenar pr\" shows",
+   "fix": "keep the next section's heading and picture out of this screen",
+   "widths": [
+    390
+   ],
+   "from": "layout",
+   "ids": [
+    "neighbour"
+   ],
+   "wheres": [
+    "#servicios section.section.g2 \"Servicios web, aplicaciones e in\""
+   ]
+  },
+  {
+   "check": "neighbour",
+   "where": "#preguntas section.section \"Preguntas sobre web, apps e invi\"",
+   "msg": "framed, 350px of the footer shows",
+   "fix": "keep the next section's heading and picture out of this screen",
+   "widths": [
+    390
+   ],
+   "from": "layout",
+   "ids": [
+    "neighbour"
+   ],
+   "wheres": [
+    "#preguntas section.section \"Preguntas sobre web, apps e invi\""
+   ]
+  }
+ ],
+ "waived": [],
+ "warnCount": 42,
+ "at": "2026-11-17T05:25:37.315Z"
+}

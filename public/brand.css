@@ -1,0 +1,361 @@
+/* Brand tokens & final cascade overrides loaded AFTER system.css and kit sheets */
+:root {
+  --p-bg: #f6f7f6;
+  --p-surface: #eaeeec;
+  --p-ink: #0e2238;
+  --p-muted: #405060;
+  --p-accent: #0e355c;
+  --p-accent-ink: #ffffff;
+  --p-action: #0e355c;
+  --p-action-ink: #ffffff;
+  --p-inv-bg: #0e2238;
+  --p-inv-surface: #1c2f44;
+  --p-inv-ink: #f6f7f6;
+  --p-inv-muted: #c2ccd6;
+  --p-inv-accent: #f6f7f6;
+  --p-inv-action: #f6f7f6;
+  --p-inv-action-ink: #0e2238;
+  --brand-sage: #2d6a56;
+  --font-display: "Funnel Display", system-ui, sans-serif;
+  --font-text: "Funnel Sans", system-ui, sans-serif;
+  --font-mono: "DM Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+  --display-weight: 400;
+  --display-tracking: -0.03em;
+  --display-tracking-xl: -0.04em;
+  --ly-scale: 0.94;
+}
+
+/* Clear heading hierarchy: h1 (40px) > h2 (32px) > h3 (20px) */
+.hero--triptych h1 {
+  font-size: clamp(32px, 2.75vw, 41px);
+  line-height: 1.06;
+}
+main section h2,
+.closing__cta h2 {
+  font-size: clamp(26px, 2.25vw, 33px);
+  line-height: 1.12;
+}
+main section h3 {
+  font-size: clamp(18px, 1.35vw, 20px);
+  line-height: 1.25;
+}
+
+/* Unify primary action color across nav, bg-field hero, actionbar, and forms */
+.nav,
+.hero.bg-field,
+.form,
+nav.actionbar {
+  --action: #0e355c;
+  --action-ink: #ffffff;
+}
+.hero--triptych .btn-row {
+  align-items: flex-start;
+}
+.actionbar .btn--primary {
+  background: #0e355c;
+  color: #ffffff;
+}
+
+/* Uniform button height across primary & secondary standard buttons (44px) */
+.btn--primary:not(.btn--xl),
+.btn--secondary:not(.btn--xl) {
+  height: 44px !important;
+  min-height: 44px;
+  max-height: 44px;
+  padding-inline: 20px;
+  font-size: 15px;
+  line-height: 1;
+  align-self: flex-start;
+}
+
+/* Footer closing CTA remains tall closing slab on all viewports (>=56px) */
+.closing__cta.close--type > .btn--xl,
+.closing__cta.close--type > .btn--xl.btn--wide {
+  background: #0e355c;
+  color: #ffffff;
+  min-height: 60px;
+}
+@media (max-width: 639px) {
+  .closing__cta.close--type > .btn--xl,
+  .closing__cta.close--type > .btn--xl.btn--wide {
+    height: 60px;
+    min-height: 60px;
+    font-size: 18px;
+  }
+}
+
+/* Prevent nav logo and links wrapping on 1024..1440px */
+.nav__logo {
+  white-space: nowrap;
+  flex-shrink: 0;
+  gap: 10px;
+}
+.nav__logo span {
+  white-space: nowrap;
+}
+.nav__links {
+  gap: clamp(14px, 1.8vw, 28px);
+}
+.nav__link {
+  white-space: nowrap;
+}
+@media (max-width: 1120px) {
+  .nav__logo span {
+    font-size: 14px;
+  }
+  .nav__links {
+    gap: 14px;
+  }
+  .nav__link {
+    font-size: 14px;
+  }
+}
+
+/* Ensure body lead copy stays >= 7:1 contrast */
+.t-lead,
+.t-lead.muted {
+  color: var(--ink);
+}
+
+/* Ensure AppFrame window captions & nested muted lines clear >= 4.5:1 */
+.ui-win {
+  --u-ink: #0e2238;
+  --u-muted: #394857;
+}
+.ui-win__nav em {
+  color: #394857;
+}
+.ui-win__row.is-selected .ui-win__sub,
+.ui-win__row.is-selected .ui-win__age {
+  color: #21354a;
+}
+
+/* AppFrame container sizing: prevent desktop bottom clipping and mobile bleed into #servicios */
+#aplicaciones {
+  height: auto;
+  min-height: calc(var(--h, 1) * var(--screen));
+  padding-bottom: clamp(56px, 7vh, 96px);
+  overflow: visible;
+}
+.app.ui,
+.app.fill {
+  height: auto;
+  min-height: 460px;
+  overflow: visible;
+}
+@media (max-width: 1023px) {
+  #aplicaciones {
+    height: auto !important;
+    min-height: 0;
+    padding-bottom: 64px;
+  }
+  .app.ui,
+  .app.fill {
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    overflow: visible !important;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: auto auto;
+  }
+  .app > .app__pane--list,
+  .app > .app__pane--open,
+  .app__pane--list .ui-win,
+  .app__pane--list .ui-win__body,
+  .app-detail {
+    max-height: none !important;
+    height: auto !important;
+    overflow: visible !important;
+  }
+}
+
+/* Services mobile sizing: stay aligned to page margin (no card padding shift) and <= 2 screens */
+@media (max-width: 639px) {
+  #servicios .g2m,
+  #servicios .grid {
+    gap: var(--s-4);
+  }
+  #servicios .card--open {
+    padding-inline: 0;
+  }
+  #servicios .panel {
+    --p-h: 138px;
+  }
+  #servicios .group + .group {
+    margin-top: var(--s-5);
+  }
+}
+
+/* Invitations section fits comfortably inside 1 desktop screen (<= 828px content) */
+#invitaciones {
+  --h: 1;
+}
+#invitaciones .frame--split {
+  --ratio: 0px;
+  min-height: 480px;
+  padding: 18px;
+}
+.invite-device {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  min-height: 440px;
+  overflow: visible;
+  border-radius: 24px;
+}
+.inv-photo {
+  aspect-ratio: 16 / 9;
+  max-height: 148px;
+}
+.inv-block {
+  padding: 12px 14px;
+  gap: 8px;
+}
+.inv-hero-block {
+  padding: 12px 14px;
+}
+.invite-scroll {
+  overflow: visible;
+}
+.inv-modal-dialog .invite-device {
+  overflow: hidden;
+  height: 78svh;
+}
+.inv-modal-dialog .invite-scroll {
+  overflow-y: auto;
+}
+@media (max-width: 1023px) {
+  #invitaciones {
+    --h: 2;
+  }
+  #invitaciones .frame--split {
+    min-height: 460px;
+  }
+}
+@media (max-width: 639px) {
+  #invitaciones {
+    --hm: 2;
+  }
+}
+.invite-device[data-theme="boda"] {
+  --inv-accent: #5e4415;
+  --inv-surface: #f2ece1;
+  --inv-muted: #463d33;
+  --inv-line: rgb(94 68 21 / 0.24);
+}
+.invite-device[data-theme="xv"] {
+  --inv-accent: #681c3f;
+  --inv-surface: #f6e8ee;
+  --inv-muted: #4d323e;
+  --inv-line: rgb(104 28 63 / 0.22);
+}
+.invite-device[data-theme="corp"] {
+  --inv-accent: #0e355c;
+  --inv-surface: #eef2f1;
+  --inv-muted: #394857;
+  --inv-line: rgb(14 53 92 / 0.16);
+}
+.invite-device .inv-topbar {
+  border-radius: 23px 23px 0 0;
+  position: static;
+}
+.inv-device-tabs {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 6px;
+  padding: 8px 12px;
+  background: var(--inv-surface);
+  border-bottom: 1px solid var(--inv-line);
+}
+.inv-subtab {
+  min-height: 32px;
+  padding: 4px 6px;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  background: transparent;
+  color: var(--inv-muted);
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  text-align: center;
+}
+.inv-subtab[aria-selected="true"] {
+  background: #ffffff;
+  color: var(--inv-accent);
+  border-color: var(--inv-line);
+}
+.inv-title {
+  font-size: 22px;
+  line-height: 1.15;
+  margin: 0;
+  color: inherit;
+}
+
+/* Process section padding so next section does not peek in */
+#proceso {
+  padding-bottom: clamp(64px, 9vh, 112px);
+}
+
+/* Quote section layout & visual card */
+#cotizar {
+  display: flex;
+  align-items: center;
+}
+.intake-panel {
+  background: var(--surface);
+  border-radius: var(--r-lg);
+  padding: clamp(22px, 3vw, 32px);
+  border: 1px solid var(--line);
+}
+.cotizar-visual-card {
+  border-radius: var(--r-md);
+  overflow: hidden;
+  border: 1px solid var(--line);
+  aspect-ratio: 16 / 7;
+  max-height: 150px;
+}
+.cotizar-visual-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.cotizar-select {
+  width: 100%;
+  height: 42px;
+  padding: 0 12px;
+  border-radius: var(--r-sm);
+  border: 1px solid var(--line-strong);
+  background: var(--bg);
+  color: var(--ink);
+  font: inherit;
+  font-size: 14px;
+}
+
+/* FAQ visual spans right edge & keeps footer clear on phone */
+#preguntas .wrap {
+  align-items: start;
+}
+.faq-photo {
+  margin-bottom: var(--s-4);
+  border-radius: var(--r-lg);
+  overflow: hidden;
+  border: 1px solid var(--line);
+  aspect-ratio: 21 / 8;
+  max-height: 196px;
+}
+.faq-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+#preguntas .faq__item {
+  padding-block: 12px;
+}
+@media (max-width: 639px) {
+  #preguntas {
+    min-height: 100svh;
+    padding-bottom: clamp(72px, 12vh, 140px);
+  }
+}

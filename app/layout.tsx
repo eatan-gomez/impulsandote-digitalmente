@@ -1,41 +1,23 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
 export const metadata: Metadata = {
-  title: "Impulsándote Digitalmente | Firma Tecnológica & Soluciones Digitales",
+  title: "Impulsándote Digitalmente: webs, aplicaciones e invitaciones digitales",
   description:
-    "Firma tecnológica que ayuda a empresas y organizadores a destacar en el mundo digital: Páginas web de alto impacto, desarrollo de aplicaciones para optimizar procesos e invitaciones digitales interactivas para eventos.",
-  keywords: [
-    "Impulsándote digitalmente",
-    "desarrollo web profesional",
-    "diseño de páginas web",
-    "desarrollo de aplicaciones a medida",
-    "invitaciones digitales interactivas",
-    "tecnología para eventos",
-    "transformación digital",
-    "software para empresas",
-    "RSVP digital eventos",
-  ],
-  authors: [{ name: "Impulsándote Digitalmente" }],
+    "Firma tecnológica que ayuda a empresas y organizadores de eventos con páginas web para captar clientes, software a medida e invitaciones digitales interactivas.",
   openGraph: {
-    title: "Impulsándote Digitalmente | Firma Tecnológica",
+    title: "Impulsándote Digitalmente: webs, aplicaciones e invitaciones digitales",
     description:
-      "Potencia tu marca, optimiza tus procesos y crea eventos inolvidables con tecnología de vanguardia y resultados tangibles.",
-    url: "https://impulsandotedigitalmente.com",
-    siteName: "Impulsándote Digitalmente",
-    locale: "es_MX",
+      "Planes estratégicos con páginas web de alto impacto, aplicaciones para procesos e invitaciones digitales para eventos.",
     type: "website",
+    locale: "es_MX",
+    siteName: "Impulsándote Digitalmente",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Impulsándote Digitalmente: webs, aplicaciones e invitaciones digitales",
+    description:
+      "Páginas web para captar clientes, desarrollo de aplicaciones e invitaciones digitales para eventos.",
   },
   icons: {
     icon: "/favicon-logo.png",
@@ -50,10 +32,63 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="es" className={`${geistSans.variable} ${geistMono.variable} dark scroll-smooth`}>
-      <body className="min-h-screen bg-[#050811] text-slate-100 font-sans selection:bg-cyan-500/20 selection:text-cyan-300 antialiased flex flex-col">
-        {children}
-      </body>
+    <html
+      lang="es"
+      data-type="software"
+      data-radius="soft"
+      data-ground="sage"
+      data-buttons="tonal"
+      data-motion=""
+      suppressHydrationWarning
+    >
+      <head>
+        <meta name="site-kind" content="software" />
+        <meta name="page-type" content="software" />
+        <meta name="theme-color" content="#f6f7f6" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        {/* eslint-disable-next-line @next/next/no-page-custom-font */}
+        <link
+          href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@400..700&family=Funnel+Sans:wght@400..600&family=DM+Mono:wght@400;500&display=swap"
+          rel="stylesheet"
+        />
+        {/* eslint-disable-next-line @next/next/no-css-tags */}
+        <link rel="stylesheet" href="/assets/system.css" />
+        {/* eslint-disable-next-line @next/next/no-css-tags */}
+        <link rel="stylesheet" href="/assets/ui/cards.css" />
+        {/* eslint-disable-next-line @next/next/no-css-tags */}
+        <link rel="stylesheet" href="/assets/ui/base.css" />
+        {/* eslint-disable-next-line @next/next/no-css-tags */}
+        <link rel="stylesheet" href="/assets/ui/stat/fragment.css" />
+        {/* eslint-disable-next-line @next/next/no-css-tags */}
+        <link rel="stylesheet" href="/assets/ui/toggles/fragment.css" />
+        {/* eslint-disable-next-line @next/next/no-css-tags */}
+        <link rel="stylesheet" href="/assets/ui/notify/fragment.css" />
+        {/* eslint-disable-next-line @next/next/no-css-tags */}
+        <link rel="stylesheet" href="/assets/ui/window/fragment.css" />
+        {/* eslint-disable-next-line @next/next/no-css-tags */}
+        <link rel="stylesheet" href="/assets/ui/checklist/fragment.css" />
+        {/* eslint-disable-next-line @next/next/no-css-tags */}
+        <link rel="stylesheet" href="/assets/diagrams/diagram.css" />
+        {/* eslint-disable-next-line @next/next/no-css-tags */}
+        <link rel="stylesheet" href="/assets/motion/motion.css" />
+        {/* eslint-disable-next-line @next/next/no-css-tags */}
+        <link rel="stylesheet" href="/assets/backgrounds/backgrounds.css" />
+        {/* eslint-disable-next-line @next/next/no-css-tags */}
+        <link rel="stylesheet" href="/assets/layout/layout.css" />
+        {/* eslint-disable-next-line @next/next/no-css-tags */}
+        <link rel="stylesheet" href="/assets/icons/icon.css" />
+        {/* eslint-disable-next-line @next/next/no-css-tags */}
+        <link rel="stylesheet" href="/brand.css" />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `document.documentElement.classList.add('m-enter');setTimeout(function(){document.documentElement.classList.add('m-enter-done')},700);document.documentElement.classList.add('mo-js');setTimeout(function(){document.documentElement.classList.add('mo-safe')},2500);`,
+          }}
+        />
+        {/* eslint-disable-next-line @next/next/no-sync-scripts */}
+        <script src="/assets/backgrounds/backgrounds.js" />
+      </head>
+      <body suppressHydrationWarning>{children}</body>
     </html>
   );
 }

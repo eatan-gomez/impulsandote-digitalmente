@@ -1,0 +1,38 @@
+{
+ "palettes": [],
+ "types": [],
+ "dealt": [
+  "funnel",
+  "outfit",
+  "bricolage"
+ ],
+ "moments": [
+  {
+   "id": "pinned-chapters",
+   "at": "2026-11-17T04:49:09.689Z",
+   "seed": "00d13d3a"
+  },
+  {
+   "id": "counter-rolls",
+   "at": "2026-11-17T04:49:09.689Z",
+   "seed": "00d13d3a"
+  }
+ ],
+ "photos": [
+  {
+   "trade": "office",
+   "lead": null,
+   "ids": [
+    "c877",
+    "d183"
+   ],
+   "sections": [
+    "workspace",
+    "notebook",
+    "detail"
+   ],
+   "seed": "0ui84y",
+   "at": "2026-11-17T04:52:13.083Z"
+  }
+ ]
+}
